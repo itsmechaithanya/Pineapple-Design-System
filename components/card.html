@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Card · Pineapple Design System</title>
+<meta name="description" content="Pineapple Design System — Bootstrap 5 design system by Chaithanya Mangali (HCI 472).">
+<link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link href="../vendor/fonts.css" rel="stylesheet">
+<link href="../vendor/bootstrap.min.css" rel="stylesheet">
+<link href="../css/sds.css" rel="stylesheet">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<nav class="navbar navbar-expand-md docs-topbar sticky-top" data-bs-theme="dark" aria-label="Design system">
+  <div class="container-xxl">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html"><img src="../img/logo-reverse.svg" alt="Chay" width="96" height="28"><span class="small text-white-50 d-none d-sm-inline border-start border-secondary ps-2 ms-1">Pineapple Design System</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#docsNav" aria-controls="docsNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse justify-content-end" id="docsNav"><ul class="navbar-nav gap-md-3 py-2 py-md-0"><li class="nav-item"><a class="nav-link px-lg-2" href="../foundations/color.html">Foundations</a></li><li class="nav-item"><a class="nav-link px-lg-2 active" href="../components/navbar.html" aria-current="true">Components</a></li><li class="nav-item"><a class="nav-link px-lg-2" href="../patterns/case-study.html">Page Pattern</a></li><li class="nav-item"><a class="nav-link px-lg-2" href="../DESIGN.md">DESIGN.md</a></li></ul></div>
+  </div>
+</nav>
+
+<header class="docs-hero">
+  <div class="container-xxl">
+    <span class="overline">[ Components · 03 ]</span>
+    <h1 class="mt-2 mb-3">Card</h1>
+    <p class="lead mb-0" style="max-width:760px">Numbered process steps and a flat project card — editorial, borderless and square.</p>
+  </div>
+</header>
+<div class="container-xxl">
+  <div class="row gx-lg-5">
+    <aside class="col-lg-3 d-none d-lg-block pt-4"><nav class="docs-sidebar" aria-label="Sections">
+<p class="group">Foundations</p>
+<a href="../foundations/color.html">Color</a>
+<a href="../foundations/typography.html">Typography</a>
+<a href="../foundations/logo.html">Logo</a>
+<p class="group">Components</p>
+<a href="../components/navbar.html">Navbar</a>
+<a href="../components/button.html">Button</a>
+<a href="../components/card.html" aria-current="page">Card</a>
+<p class="group">Page Pattern</p>
+<a href="../patterns/case-study.html">Case study page</a>
+</nav></aside>
+    <main id="main" class="col-lg-9">
+
+<section class="docs-section" aria-labelledby="ex">
+  <h2 id="ex" class="h3">Process step</h2>
+  <p class="text-secondary-sv">An editorial list instead of boxed cards: a big light numeral, a title and a short line, separated by a 1px ink rule. Columns go 1 → 2 → 4 across.</p>
+  <div class="demo"><div class="row g-4"><div class="col-12 col-md-6 col-lg-3"><article class="step-sv"><span class="numeral-sv" aria-hidden="true">1.</span><h3 class="h5 mb-2"><span class="visually-hidden">Step 1: </span>Research</h3><p>Twelve interviews, ages 20–72, plus a competitive analysis of Zocdoc and MyChart.</p></article></div><div class="col-12 col-md-6 col-lg-3"><article class="step-sv"><span class="numeral-sv" aria-hidden="true">2.</span><h3 class="h5 mb-2"><span class="visually-hidden">Step 2: </span>Synthesize</h3><p>Affinity mapping into goals and frustrations, then three personas: Strawberry, Blueberry and Watermelon.</p></article></div><div class="col-12 col-md-6 col-lg-3"><article class="step-sv"><span class="numeral-sv" aria-hidden="true">3.</span><h3 class="h5 mb-2"><span class="visually-hidden">Step 3: </span>Iterate</h3><p>Three versions: paper prototypes, a color-coded grid, then a minimal white design.</p></article></div><div class="col-12 col-md-6 col-lg-3"><article class="step-sv"><span class="numeral-sv" aria-hidden="true">4.</span><h3 class="h5 mb-2"><span class="visually-hidden">Step 4: </span>Test</h3><p>Four remote usability tests surfaced missing integrations and onboarding friction.</p></article></div></div></div>
+  <h2 class="h3 mt-5">Service row</h2>
+  <p class="text-secondary-sv">Used under each numbered step on the case-study page: a ghost-grey title and a short line, separated by hairlines.</p>
+  <div class="demo">
+<style>
+.ls-aside { font-size: .8125rem; color: var(--sv-text-secondary); }
+.ls-hero { padding-top: clamp(72px, 11vw, 160px); padding-bottom: 32px; }
+.ls-hero h1 { font-size: clamp(2.5rem, 6.4vw, 5.625rem); font-weight: 300; line-height: 1; letter-spacing: -.04em; max-width: 14ch; }
+.ls-strip { border-top: 1px solid var(--sv-ink-900); padding-top: 14px; margin-top: clamp(40px, 8vw, 120px); font-size: .75rem; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.ls-strip a { color: inherit; text-decoration: none; } .ls-strip a:hover { text-decoration: underline; }
+.ls-strip .grp { display: flex; gap: clamp(16px, 4vw, 64px); }
+.ls-kicker { font-family: var(--sv-font-heading); font-weight: 300; font-size: 1.5625rem; color: var(--sv-grey-400); margin-bottom: 12px; }
+.ls-statement { font-family: var(--sv-font-heading); font-weight: 500; font-size: clamp(1.5rem, 2.6vw, 2.1875rem); line-height: 1.25; letter-spacing: -.01em; max-width: 22ch; }
+.ls-photo { width: 100%; height: 100%; object-fit: cover; display: block; }
+.ls-section { padding-block: clamp(64px, 9vw, 120px); }
+.ls-h2xl { font-size: clamp(2.0625rem, 6.4vw, 5.625rem); font-weight: 300; line-height: 1; letter-spacing: -.04em; }
+.ls-numeral { font-family: var(--sv-font-heading); font-weight: 300; font-size: clamp(6rem, 20vw, 18.75rem); line-height: .85; letter-spacing: -.05em; }
+.ls-service { display: flex; align-items: center; gap: 24px; padding: 18px 0 18px 30px; border-top: 1px solid var(--sv-border-default); }
+.ls-service:last-of-type { border-bottom: 1px solid var(--sv-border-default); }
+.ls-service h3 { font-family: var(--sv-font-heading); font-weight: 300; font-size: 1.5625rem; color: var(--sv-grey-500); margin: 0; flex: 1; }
+.ls-service p { font-size: .8125rem; margin: 0; width: 246px; }
+@media (max-width: 575.98px) { .ls-service { flex-direction: column; align-items: flex-start; gap: 6px; padding-left: 0; } .ls-service p { width: auto; } }
+.ls-about p { font-family: var(--sv-font-heading); font-size: 1.5625rem; line-height: 1.25; letter-spacing: -.01em; max-width: 30ch; }
+.ls-images { display: grid; gap: 10px; grid-template-columns: 1fr 1fr; }
+.ls-images > :first-child { grid-column: 1 / -1; aspect-ratio: 16 / 9; }
+.ls-images > * { aspect-ratio: 3 / 4; overflow: hidden; background: var(--sv-grey-50); }
+@media (min-width: 768px) { .ls-images { grid-template-columns: 610fr 229fr 457fr; } .ls-images > :first-child { grid-column: auto; aspect-ratio: auto; } .ls-images > * { aspect-ratio: auto; height: clamp(240px, 24vw, 343px); } }
+.marquee-sv.pink { background: var(--sv-pink-500, #EE55B6); } .marquee-sv.green { background: var(--sv-green-500, #6BFD03); }
+.ls-coords { font-size: .8125rem; text-align: right; }
+.ls-cta { font-family: var(--sv-font-heading); font-weight: 500; font-size: clamp(1.5rem, 2.6vw, 2.1875rem); line-height: 1.25; margin: 0; }
+.ls-drives-photo { aspect-ratio: 597 / 934; overflow: hidden; }
+</style><div class="ls-service"><h3>Competitive analysis</h3><p>Zocdoc and MyChart: strengths, gaps and opportunities</p></div><div class="ls-service"><h3>12 interviews</h3><p>Ages 20–72, 15–30 minutes, over Zoom or in person</p></div><div class="ls-service"><h3>Affinity mapping</h3><p>Goals, frustrations and user quotes, sorted into themes</p></div></div>
+  <h2 class="h3 mt-5">Project card</h2>
+  <p class="text-secondary-sv">A flat <code>.card</code> with a full-bleed image. The whole card is one link to the next case study.</p>
+  <div class="demo"><div class="row"><div class="col-md-8 col-lg-6"><a class="card card-sv" href="#" aria-labelledby="pj-title">
+  <div class="cover" style="background:var(--sv-grey-50)"><img src="../img/pa-hero.png" alt="" style="width:100%;height:100%;object-fit:cover"></div>
+  <div class="card-body d-flex flex-column gap-2 align-items-start">
+    <span class="badge-sv badge-sv-accent">Next case study</span>
+    <h3 id="pj-title" class="card-title h4 m-0">CookIQ — Context-aware cooking</h3>
+    <p class="card-text m-0">An adaptive cooking app that guides beginners step by step and adapts to the tools they have.</p>
+    <span class="btn btn-light-sv mt-2" aria-hidden="true">Read case study</span>
+  </div>
+</a></div></div></div>
+  <p class="small text-secondary-sv mt-3">Figma: <b>Card / Process</b> (Step, Title, Body text properties) and <b>Card / Project</b> (contains Badge + Button instances). Both use auto layout.</p>
+</section>
+<section class="docs-section" aria-labelledby="spec">
+  <h2 id="spec" class="h3">CSS specifications</h2>
+  <div class="table-responsive"><table class="table spec-table align-middle"><thead><tr><th>Property</th><th>Value</th><th>Token / CSS</th></tr></thead><tbody><tr><td>Step rule</td><td>1px ink, top</td><td><code>var(--sv-border-strong)</code></td></tr><tr><td>Step padding</td><td>24px top</td><td><code>padding-top</code></td></tr><tr><td>Numeral</td><td>Outfit Light 96 / 90%, −4%</td><td><code>.numeral-sv</code></td></tr><tr><td>Step title</td><td>Outfit Regular 25 (H5)</td><td><code>.h5</code></td></tr><tr><td>Step body</td><td>DM Sans 16 / 160%, Grey 500</td><td><code>var(--sv-text-secondary)</code></td></tr><tr><td>Project card</td><td>No border, no radius, no shadow</td><td><code>.card-sv</code></td></tr><tr><td>Cover</td><td>Ink, 636:240 ratio</td><td><code>aspect-ratio</code></td></tr><tr><td>Card body</td><td>24px padding, 8px gap</td><td><code>--bs-card-spacer-x / gap-2</code></td></tr><tr><td>Hover (link card)</td><td>Title underlines</td><td><code>a.card-sv:hover .card-title</code></td></tr><tr><td>Grid gap</td><td>24px</td><td><code>.g-4</code></td></tr></tbody></table></div>
+  <pre class="code"><code class="language-css">.step-sv { border-top: 1px solid var(--sv-border-strong); padding-top: 24px; height: 100%; }
+.numeral-sv { font-family: var(--sv-font-heading); font-size: clamp(4.5rem, 8vw, 6rem); font-weight: 300;
+  line-height: .9; letter-spacing: -.04em; margin-bottom: 24px; }
+.step-sv p { color: var(--sv-text-secondary); }
+.card-sv { --bs-card-border-width: 0; --bs-card-border-radius: 0; height: 100%; }
+a.card-sv:hover .card-title { text-decoration: underline; text-underline-offset: 4px; }</code></pre>
+  <h3 class="h5 mt-4">Markup</h3>
+  <pre class="code"><code class="language-html">&lt;div class=&quot;row g-4&quot;&gt;
+  &lt;div class=&quot;col-12 col-md-6 col-lg-3&quot;&gt;
+    &lt;article class=&quot;step-sv&quot;&gt;
+      &lt;span class=&quot;numeral-sv&quot; aria-hidden=&quot;true&quot;&gt;1.&lt;/span&gt;
+      &lt;h3 class=&quot;h5 mb-2&quot;&gt;&lt;span class=&quot;visually-hidden&quot;&gt;Step 1: &lt;/span&gt;Research&lt;/h3&gt;
+      &lt;p&gt;Twelve interviews, ages 20–72, plus a competitive analysis of Zocdoc and MyChart.&lt;/p&gt;
+    &lt;/article&gt;
+  &lt;/div&gt;
+  &lt;!-- …three more columns --&gt;
+&lt;/div&gt;</code></pre>
+</section>
+<section class="docs-section" aria-labelledby="acc">
+  <h2 id="acc" class="h3">Accessibility</h2>
+  <ul class="a11y-list">
+    <li>Each step is an <code>&lt;article&gt;</code> with a real H3 under the section’s H2. The big numeral is hidden from screen readers; a visually hidden “Step 1:” is read instead.</li>
+    <li>For the project card, the <b>whole card is one link</b> with <code>aria-labelledby</code> on its title — no nested links. The inner “button” is a visual cue only (<code>aria-hidden</code>).</li>
+    <li>Decorative cover images use <code>alt=""</code>.</li>
+    <li>Step body text is Grey 500 on white (5.3:1).</li>
+    <li>Hover shows an underline rather than motion, so nothing moves for users who prefer reduced motion.</li>
+  </ul>
+</section>
+
+    </main>
+  </div>
+</div>
+<footer class="footer-sv">
+  <div class="container-xxl">
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-4">
+      <img src="../img/logo-reverse.svg" alt="Chay" width="120" height="35">
+      <ul class="list-inline m-0 d-flex flex-wrap gap-4">
+        <li><a href="https://www.figma.com/design/3VfjauqFIbsYq6r5nHmMNi">Figma file</a></li>
+        <li><a href="../DESIGN.md">DESIGN.md</a></li>
+        <li><a href="https://typographicalhierarchies.vercel.app/">Type hierarchies</a></li>
+        <li><a href="https://github.com/itsmechaithanya">GitHub</a></li>
+      </ul>
+    </div>
+    <hr>
+    <p class="copy m-0">© 2026 Chaithanya Mangali · HCI 472 Design Fundamentals II · Built with Bootstrap 5 from a DESIGN.md exported from Figma.</p>
+  </div>
+</footer>
+<script src="../vendor/bootstrap.bundle.min.js"></script><script>
+document.querySelectorAll('pre.code').forEach(pre => {
+  const b = document.createElement('button'); b.className = 'copy-btn'; b.type = 'button'; b.textContent = 'Copy';
+  b.addEventListener('click', async () => { try { await navigator.clipboard.writeText(pre.querySelector('code').innerText); b.textContent = 'Copied'; } catch (e) { b.textContent = 'Select & copy'; } setTimeout(() => b.textContent = 'Copy', 1600); });
+  pre.appendChild(b);
+});
+</script>
+</body>
+</html>

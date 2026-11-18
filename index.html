@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home · Pineapple Design System</title>
+<meta name="description" content="Pineapple Design System — Bootstrap 5 design system by Chaithanya Mangali (HCI 472).">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link href="vendor/fonts.css" rel="stylesheet">
+<link href="vendor/bootstrap.min.css" rel="stylesheet">
+<link href="css/sds.css" rel="stylesheet">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<nav class="navbar navbar-expand-md docs-topbar sticky-top" data-bs-theme="dark" aria-label="Design system">
+  <div class="container-xxl">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html"><img src="img/logo-reverse.svg" alt="Chay" width="96" height="28"><span class="small text-white-50 d-none d-sm-inline border-start border-secondary ps-2 ms-1">Pineapple Design System</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#docsNav" aria-controls="docsNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse justify-content-end" id="docsNav"><ul class="navbar-nav gap-md-3 py-2 py-md-0"><li class="nav-item"><a class="nav-link px-lg-2" href="foundations/color.html">Foundations</a></li><li class="nav-item"><a class="nav-link px-lg-2" href="components/navbar.html">Components</a></li><li class="nav-item"><a class="nav-link px-lg-2" href="patterns/case-study.html">Page Pattern</a></li><li class="nav-item"><a class="nav-link px-lg-2" href="DESIGN.md">DESIGN.md</a></li></ul></div>
+  </div>
+</nav>
+
+<style>
+.cover { background: var(--sv-ink-900); color: #fff; position: relative; overflow: hidden; min-height: min(92vh, 860px); display: flex; align-items: center; }
+.cover .container-xxl { position: relative; z-index: 2; }
+.cover h1 { color: #fff; font-size: clamp(3rem, 9vw, 8rem); font-weight: 300; line-height: .95; letter-spacing: -.04em; }
+.cover .kicker { color: var(--sv-lime-500); font-size: .8125rem; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; }
+.cover .sub { color: rgba(255,255,255,.8); font-size: 1.25rem; max-width: 620px; }
+.cover .cover-mark { position: absolute; right: -6vw; top: 50%; width: min(64vw, 820px); aspect-ratio: 97.44/100; transform: translateY(-50%); z-index: 1; }
+.cover .cover-mark .half { position: absolute; inset: 0; background-repeat: no-repeat; background-size: contain; }
+.cover .cover-mark .q { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 97.44 100'%3E%3Cg transform='scale(1.2821) translate(-12 -11)'%3E%3Cpath d='M53.58 16.18A26 26 0 1 0 41.08 62.82Z' fill='%231F1F1F'/%3E%3C/g%3E%3C/svg%3E"); }
+.cover .cover-mark .a { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 97.44 100'%3E%3Cg transform='scale(1.2821) translate(-12 -11)'%3E%3Cpath d='M53.58 16.18A26 26 0 1 0 41.08 62.82Z' fill='%23ADF801' transform='rotate(180 50 50)'/%3E%3C/g%3E%3C/svg%3E"); }
+.cover .orbit { position: absolute; border: 1px solid rgba(255,255,255,.08); border-radius: 50%; z-index: 0; right: calc(-6vw + min(32vw, 410px)); top: 50%; transform: translate(50%, -50%); }
+@media (prefers-reduced-motion: no-preference) {
+  .cover .cover-mark .q { animation: inQ 1.2s cubic-bezier(.2,.8,.2,1) both; }
+  .cover .cover-mark .a { animation: inA 1.2s cubic-bezier(.2,.8,.2,1) .15s both; }
+  .cover .reveal { animation: rise .9s cubic-bezier(.2,.8,.2,1) both; }
+  .cover .reveal:nth-child(2) { animation-delay: .1s } .cover .reveal:nth-child(3) { animation-delay: .2s } .cover .reveal:nth-child(4) { animation-delay: .3s } .cover .reveal:nth-child(5) { animation-delay: .4s }
+}
+@keyframes inQ { from { transform: translate(-14%, -10%); opacity: 0 } to { transform: none; opacity: 1 } }
+@keyframes inA { from { transform: translate(14%, 10%); opacity: 0 } to { transform: none; opacity: 1 } }
+@keyframes rise { from { transform: translateY(18px); opacity: 0 } to { transform: none; opacity: 1 } }
+.swatches { display: flex; gap: 10px; } .swatches span { width: 40px; height: 40px; border-radius: 50%; border: 1px solid rgba(255,255,255,.3); }
+.cover-tile { border-top: 1px solid var(--sv-border-strong); padding: 24px 0 0; display: flex; flex-direction: column; background: #fff; }
+.cover-tile .num { font-family: var(--sv-font-heading); font-size: 96px; font-weight: 300; letter-spacing: -.04em; color: var(--sv-ink-900); line-height: 1; }
+.tile-link { display: flex; justify-content: space-between; padding: 12px 0; border-top: 1px solid var(--sv-border-default); text-decoration: none; color: var(--sv-text-primary); font-weight: 600; }
+.tile-link:hover { color: var(--sv-grey-500); } .tile-link:hover span { transform: translateX(4px); } .tile-link span { transition: transform .2s; }
+.facts dt { font-size: .75rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--sv-text-secondary); font-weight: 600; } .facts dd { font-family: var(--sv-font-heading); font-size: 1.75rem; font-weight: 500; margin: 0; }
+@media (max-width: 767.98px) { .cover .cover-mark { opacity: .35; right: -30vw; width: 110vw; } }
+</style>
+<main id="main">
+<section class="cover" aria-labelledby="cover-title">
+  <div class="orbit" style="width:min(70vw,900px);aspect-ratio:1"></div><div class="orbit" style="width:min(90vw,1160px);aspect-ratio:1"></div>
+  <div class="cover-mark" aria-hidden="true"><img src="img/mark-color.svg" alt="" style="width:100%;height:100%"></div>
+  <div class="container-xxl py-5">
+    <p class="kicker reveal">HCI 472 · Final project · Chaithanya Mangali</p>
+    <h1 id="cover-title" class="reveal my-4">Simple<br>Design<br>System</h1>
+    <p class="sub reveal">A Bootstrap 5 system for my UX portfolio — built from a DESIGN.md exported from my Figma file. Tokens, type, three components and a live case-study page for Pineapple, a healthcare navigation app.</p>
+    <div class="d-flex flex-wrap gap-3 mt-4 reveal"><a class="btn btn-accent" href="patterns/case-study.html">See the page pattern</a><a class="btn btn-light-sv" href="foundations/color.html">Browse foundations</a></div>
+    <div class="swatches mt-5 reveal" aria-hidden="true"><span style="background:#0A0A0A"></span><span style="background:#2B2B2B"></span><span style="background:#6B6B6B"></span><span style="background:#E5E5E5"></span><span style="background:#ADF801"></span><span style="background:#FFFFFF"></span></div>
+  </div>
+</section>
+<div class="marquee-sv" aria-hidden="true"><div class="track">SIMPLE DESIGN SYSTEM — FOUNDATIONS — COMPONENTS — PAGE PATTERN — SIMPLE DESIGN SYSTEM — FOUNDATIONS — COMPONENTS — PAGE PATTERN — SIMPLE DESIGN SYSTEM — FOUNDATIONS — COMPONENTS — PAGE PATTERN — SIMPLE DESIGN SYSTEM — FOUNDATIONS — COMPONENTS — PAGE PATTERN — SIMPLE DESIGN SYSTEM — FOUNDATIONS — COMPONENTS — PAGE PATTERN — SIMPLE DESIGN SYSTEM — FOUNDATIONS — COMPONENTS — PAGE PATTERN — SIMPLE DESIGN SYSTEM — FOUNDATIONS — COMPONENTS — PAGE PATTERN — SIMPLE DESIGN SYSTEM — FOUNDATIONS — COMPONENTS — PAGE PATTERN — SIMPLE DESIGN SYSTEM — FOUNDATIONS — COMPONENTS — PAGE PATTERN — SIMPLE DESIGN SYSTEM — FOUNDATIONS — COMPONENTS — PAGE PATTERN — SIMPLE DESIGN SYSTEM — FOUNDATIONS — COMPONENTS — PAGE PATTERN — SIMPLE DESIGN SYSTEM — FOUNDATIONS — COMPONENTS — PAGE PATTERN — SIMPLE DESIGN SYSTEM — FOUNDATIONS — COMPONENTS — PAGE PATTERN — SIMPLE DESIGN SYSTEM — FOUNDATIONS — COMPONENTS — PAGE PATTERN — SIMPLE DESIGN SYSTEM — FOUNDATIONS — COMPONENTS — PAGE PATTERN — SIMPLE DESIGN SYSTEM — FOUNDATIONS — COMPONENTS — PAGE PATTERN — </div></div>
+<section class="section-sv">
+  <div class="container-xxl">
+    <dl class="row facts g-4 mb-5">
+      <div class="col-6 col-md-3"><dt>Colors</dt><dd>21 + 15 tokens</dd></div>
+      <div class="col-6 col-md-3"><dt>Type</dt><dd>15 styles</dd></div>
+      <div class="col-6 col-md-3"><dt>Grid</dt><dd>12 col · 24px</dd></div>
+      <div class="col-6 col-md-3"><dt>Breakpoints</dt><dd>390 · 768 · 1440</dd></div>
+    </dl>
+    <div class="row g-4"><div class="col-md-4"><div class="cover-tile h-100"><span class="num">1.</span><h2 class="h3 mt-4 mb-2">Foundations</h2><p class="text-secondary-sv">Color, typography and logo — the decisions everything else inherits.</p><ul class="list-unstyled m-0 mt-auto"><li><a class="tile-link" href="foundations/color.html">Color<span aria-hidden="true">→</span></a></li><li><a class="tile-link" href="foundations/typography.html">Typography<span aria-hidden="true">→</span></a></li><li><a class="tile-link" href="foundations/logo.html">Logo<span aria-hidden="true">→</span></a></li></ul></div></div><div class="col-md-4"><div class="cover-tile h-100"><span class="num">2.</span><h2 class="h3 mt-4 mb-2">Components</h2><p class="text-secondary-sv">Three Bootstrap components from the layout, with CSS specs and accessibility notes.</p><ul class="list-unstyled m-0 mt-auto"><li><a class="tile-link" href="components/navbar.html">Navbar<span aria-hidden="true">→</span></a></li><li><a class="tile-link" href="components/button.html">Button<span aria-hidden="true">→</span></a></li><li><a class="tile-link" href="components/card.html">Card<span aria-hidden="true">→</span></a></li></ul></div></div><div class="col-md-4"><div class="cover-tile h-100"><span class="num">3.</span><h2 class="h3 mt-4 mb-2">Page Pattern</h2><p class="text-secondary-sv">A live, responsive version of the Figma case-study layout.</p><ul class="list-unstyled m-0 mt-auto"><li><a class="tile-link" href="patterns/case-study.html">Case study page<span aria-hidden="true">→</span></a></li></ul></div></div></div>
+    <div class="demo bg-subtle-sv mt-5 d-flex flex-column flex-md-row gap-3 justify-content-between align-items-md-center">
+      <div><p class="overline mb-1">[ Source files ]</p><p class="m-0">Design in Figma → exported as <code>DESIGN.md</code> → built with Claude and Bootstrap 5.</p></div>
+      <div class="d-flex flex-wrap gap-2"><a class="btn btn-primary" href="https://www.figma.com/design/3VfjauqFIbsYq6r5nHmMNi">Open Figma</a><a class="btn btn-outline-primary" href="DESIGN.md">View DESIGN.md</a></div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="footer-sv">
+  <div class="container-xxl">
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-4">
+      <img src="img/logo-reverse.svg" alt="Chay" width="120" height="35">
+      <ul class="list-inline m-0 d-flex flex-wrap gap-4">
+        <li><a href="https://www.figma.com/design/3VfjauqFIbsYq6r5nHmMNi">Figma file</a></li>
+        <li><a href="DESIGN.md">DESIGN.md</a></li>
+        <li><a href="https://typographicalhierarchies.vercel.app/">Type hierarchies</a></li>
+        <li><a href="https://github.com/itsmechaithanya">GitHub</a></li>
+      </ul>
+    </div>
+    <hr>
+    <p class="copy m-0">© 2026 Chaithanya Mangali · HCI 472 Design Fundamentals II · Built with Bootstrap 5 from a DESIGN.md exported from Figma.</p>
+  </div>
+</footer>
+<script src="vendor/bootstrap.bundle.min.js"></script>
+</body>
+</html>

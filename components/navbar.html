@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Navbar · Pineapple Design System</title>
+<meta name="description" content="Pineapple Design System — Bootstrap 5 design system by Chaithanya Mangali (HCI 472).">
+<link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link href="../vendor/fonts.css" rel="stylesheet">
+<link href="../vendor/bootstrap.min.css" rel="stylesheet">
+<link href="../css/sds.css" rel="stylesheet">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<nav class="navbar navbar-expand-md docs-topbar sticky-top" data-bs-theme="dark" aria-label="Design system">
+  <div class="container-xxl">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html"><img src="../img/logo-reverse.svg" alt="Chay" width="96" height="28"><span class="small text-white-50 d-none d-sm-inline border-start border-secondary ps-2 ms-1">Pineapple Design System</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#docsNav" aria-controls="docsNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse justify-content-end" id="docsNav"><ul class="navbar-nav gap-md-3 py-2 py-md-0"><li class="nav-item"><a class="nav-link px-lg-2" href="../foundations/color.html">Foundations</a></li><li class="nav-item"><a class="nav-link px-lg-2 active" href="../components/navbar.html" aria-current="true">Components</a></li><li class="nav-item"><a class="nav-link px-lg-2" href="../patterns/case-study.html">Page Pattern</a></li><li class="nav-item"><a class="nav-link px-lg-2" href="../DESIGN.md">DESIGN.md</a></li></ul></div>
+  </div>
+</nav>
+
+<header class="docs-hero">
+  <div class="container-xxl">
+    <span class="overline">[ Components · 01 ]</span>
+    <h1 class="mt-2 mb-3">Navbar</h1>
+    <p class="lead mb-0" style="max-width:760px">A quiet, sticky Bootstrap navbar: wordmark, plain links and one dark button. Collapses to a toggler below 992px.</p>
+  </div>
+</header>
+<div class="container-xxl">
+  <div class="row gx-lg-5">
+    <aside class="col-lg-3 d-none d-lg-block pt-4"><nav class="docs-sidebar" aria-label="Sections">
+<p class="group">Foundations</p>
+<a href="../foundations/color.html">Color</a>
+<a href="../foundations/typography.html">Typography</a>
+<a href="../foundations/logo.html">Logo</a>
+<p class="group">Components</p>
+<a href="../components/navbar.html" aria-current="page">Navbar</a>
+<a href="../components/button.html">Button</a>
+<a href="../components/card.html">Card</a>
+<p class="group">Page Pattern</p>
+<a href="../patterns/case-study.html">Case study page</a>
+</nav></aside>
+    <main id="main" class="col-lg-9">
+
+<section class="docs-section" aria-labelledby="ex">
+  <h2 id="ex" class="h3">Examples</h2>
+  <p class="text-secondary-sv">White bar with my wordmark, plain links and one dark button. Below 992px it collapses behind a bordered toggler. Both demos are live.</p>
+  <p class="overline mb-2 mt-4">[ Desktop ]</p>
+  <div class="demo p-0 overflow-hidden"><nav class="navbar navbar-expand-lg navbar-sv " aria-label="Main">
+  <div class="container">
+    <a class="navbar-brand" href="#"><img src="../img/logo-color.svg" alt="Chay" width="110" height="32"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#demoNav"
+            aria-controls="demoNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="demoNav">
+      <ul class="navbar-nav align-items-lg-center">
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Work</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Process</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+      </ul>
+      <a class="btn btn-primary ms-lg-4 mt-2 mt-lg-0" href="#">Résumé</a>
+    </div>
+  </div>
+</nav></div>
+  <p class="overline mb-2 mt-4">[ Mobile — collapsed ]</p>
+  <div class="demo p-0 overflow-hidden" style="max-width:390px"><nav class="navbar  navbar-sv " aria-label="Main">
+  <div class="container-fluid px-3">
+    <a class="navbar-brand" href="#"><img src="../img/logo-color.svg" alt="Chay" width="110" height="32"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#demoNavM"
+            aria-controls="demoNavM" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="demoNavM">
+      <ul class="navbar-nav align-items-lg-center">
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Work</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Process</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+      </ul>
+      <a class="btn btn-primary ms-lg-4 mt-2 mt-lg-0" href="#">Résumé</a>
+    </div>
+  </div>
+</nav></div>
+</section>
+<section class="docs-section" aria-labelledby="anat">
+  <h2 id="anat" class="h3">Anatomy</h2>
+  <ol class="a11y-list"><li><b>Brand</b> — Wordmark component (“Chay :)”, Outfit Medium 22), matching my portfolio.</li><li><b>Nav links</b> — <code>.nav-link</code> in grey; the active link is ink SemiBold with a 24 × 2px ink underline.</li><li><b>Action</b> — Button, Primary (ink, with ↗).</li><li><b>Toggler</b> — 44px square button, shown below <code>lg</code>.</li></ol>
+</section>
+<section class="docs-section" aria-labelledby="spec">
+  <h2 id="spec" class="h3">CSS specifications</h2>
+  <div class="table-responsive"><table class="table spec-table align-middle"><thead><tr><th>Property</th><th>Value</th><th>Token / CSS</th></tr></thead><tbody><tr><td>Height</td><td>80px desktop / 64px mobile</td><td><code>min-height</code></td></tr><tr><td>Background</td><td>White</td><td><code>var(--sv-bg-default)</code></td></tr><tr><td>Bottom border</td><td>1px hairline</td><td><code>var(--sv-border-default)</code></td></tr><tr><td>Position</td><td>Sticky top, z-index 1020</td><td><code>.sticky-top</code></td></tr><tr><td>Breakpoint</td><td>Expands at 992px</td><td><code>.navbar-expand-lg</code></td></tr><tr><td>Link font</td><td>DM Sans 16 / Regular → SemiBold active</td><td><code>var(--sv-font-body)</code></td></tr><tr><td>Link color</td><td>Grey 500 → Ink on hover/active</td><td><code>var(--sv-text-secondary) / var(--sv-text-primary)</code></td></tr><tr><td>Link gap</td><td>24px</td><td><code>gap: var(--sv-space-4)</code></td></tr><tr><td>Active indicator</td><td>24 × 2px ink underline</td><td><code>var(--sv-ink-900)</code></td></tr><tr><td>Toggler</td><td>1px hairline border, square, padding 10</td><td><code>var(--sv-border-default)</code></td></tr><tr><td>Focus</td><td>2px white + 2px ink ring</td><td><code>var(--sv-focus-ring)</code></td></tr></tbody></table></div>
+  <pre class="code"><code class="language-css">.navbar-sv { background: var(--sv-bg-default); border-bottom: 1px solid var(--sv-border-default); min-height: 64px; }
+@media (min-width: 992px) { .navbar-sv { min-height: 80px; } .navbar-sv .navbar-nav { gap: 24px; } }
+.navbar-sv .nav-link { color: var(--sv-text-secondary); position: relative; }
+.navbar-sv .nav-link[aria-current=&quot;page&quot;] { color: var(--sv-text-primary); font-weight: 600; }
+.navbar-sv .nav-link[aria-current=&quot;page&quot;]::after { content: &quot;&quot;; position: absolute; left: 50%; bottom: 0;
+  width: 24px; height: 2px; background: var(--sv-ink-900); transform: translateX(-50%); }
+.navbar-sv .navbar-toggler { border: 1px solid var(--sv-border-default); border-radius: 0; padding: 10px; }</code></pre>
+  <h3 class="h5 mt-4">Markup</h3>
+  <pre class="code"><code class="language-html">&lt;nav class=&quot;navbar navbar-expand-lg navbar-sv sticky-top&quot; aria-label=&quot;Main&quot;&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;&gt;&lt;img src=&quot;img/logo-color.svg&quot; alt=&quot;Chay&quot; width=&quot;110&quot; height=&quot;32&quot;&gt;&lt;/a&gt;
+    &lt;button class=&quot;navbar-toggler&quot; type=&quot;button&quot; data-bs-toggle=&quot;collapse&quot; data-bs-target=&quot;#mainNav&quot;
+            aria-controls=&quot;mainNav&quot; aria-expanded=&quot;false&quot; aria-label=&quot;Toggle navigation&quot;&gt;
+      &lt;span class=&quot;navbar-toggler-icon&quot;&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;div class=&quot;collapse navbar-collapse justify-content-end&quot; id=&quot;mainNav&quot;&gt;
+      &lt;ul class=&quot;navbar-nav align-items-lg-center&quot;&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link active&quot; aria-current=&quot;page&quot; href=&quot;#&quot;&gt;Work&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Process&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;a class=&quot;btn btn-primary ms-lg-4 mt-2 mt-lg-0&quot; href=&quot;#&quot;&gt;Résumé&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;</code></pre>
+</section>
+<section class="docs-section" aria-labelledby="acc">
+  <h2 id="acc" class="h3">Accessibility</h2>
+  <ul class="a11y-list">
+    <li>Wrap in <code>&lt;nav aria-label="Main"&gt;</code>; give any second nav a different label.</li>
+    <li>Mark the current page with <code>aria-current="page"</code>, not color alone — the underline and bolder weight are extra cues.</li>
+    <li>The toggler keeps <code>aria-controls</code> and <code>aria-expanded</code> in sync (Bootstrap’s collapse plugin) and has an <code>aria-label</code>.</li>
+    <li>Provide a “Skip to content” link before the navbar.</li>
+    <li>Tab order follows reading order: brand → links → button. The focus ring is never removed.</li>
+    <li>Toggler and links are at least 44 × 44px; inactive link grey is 5.3:1 on white.</li>
+    <li>The wordmark is real text, so screen readers read it without alt text; it links home.</li>
+  </ul>
+</section>
+
+    </main>
+  </div>
+</div>
+<footer class="footer-sv">
+  <div class="container-xxl">
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-4">
+      <img src="../img/logo-reverse.svg" alt="Chay" width="120" height="35">
+      <ul class="list-inline m-0 d-flex flex-wrap gap-4">
+        <li><a href="https://www.figma.com/design/3VfjauqFIbsYq6r5nHmMNi">Figma file</a></li>
+        <li><a href="../DESIGN.md">DESIGN.md</a></li>
+        <li><a href="https://typographicalhierarchies.vercel.app/">Type hierarchies</a></li>
+        <li><a href="https://github.com/itsmechaithanya">GitHub</a></li>
+      </ul>
+    </div>
+    <hr>
+    <p class="copy m-0">© 2026 Chaithanya Mangali · HCI 472 Design Fundamentals II · Built with Bootstrap 5 from a DESIGN.md exported from Figma.</p>
+  </div>
+</footer>
+<script src="../vendor/bootstrap.bundle.min.js"></script><script>
+document.querySelectorAll('pre.code').forEach(pre => {
+  const b = document.createElement('button'); b.className = 'copy-btn'; b.type = 'button'; b.textContent = 'Copy';
+  b.addEventListener('click', async () => { try { await navigator.clipboard.writeText(pre.querySelector('code').innerText); b.textContent = 'Copied'; } catch (e) { b.textContent = 'Select & copy'; } setTimeout(() => b.textContent = 'Copy', 1600); });
+  pre.appendChild(b);
+});
+</script>
+</body>
+</html>

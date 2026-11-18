@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Typography · Pineapple Design System</title>
+<meta name="description" content="Pineapple Design System — Bootstrap 5 design system by Chaithanya Mangali (HCI 472).">
+<link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link href="../vendor/fonts.css" rel="stylesheet">
+<link href="../vendor/bootstrap.min.css" rel="stylesheet">
+<link href="../css/sds.css" rel="stylesheet">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<nav class="navbar navbar-expand-md docs-topbar sticky-top" data-bs-theme="dark" aria-label="Design system">
+  <div class="container-xxl">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html"><img src="../img/logo-reverse.svg" alt="Chay" width="96" height="28"><span class="small text-white-50 d-none d-sm-inline border-start border-secondary ps-2 ms-1">Pineapple Design System</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#docsNav" aria-controls="docsNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse justify-content-end" id="docsNav"><ul class="navbar-nav gap-md-3 py-2 py-md-0"><li class="nav-item"><a class="nav-link px-lg-2 active" href="../foundations/color.html" aria-current="true">Foundations</a></li><li class="nav-item"><a class="nav-link px-lg-2" href="../components/navbar.html">Components</a></li><li class="nav-item"><a class="nav-link px-lg-2" href="../patterns/case-study.html">Page Pattern</a></li><li class="nav-item"><a class="nav-link px-lg-2" href="../DESIGN.md">DESIGN.md</a></li></ul></div>
+  </div>
+</nav>
+
+<header class="docs-hero">
+  <div class="container-xxl">
+    <span class="overline">[ Foundations · 02 ]</span>
+    <h1 class="mt-2 mb-3">Typography</h1>
+    <p class="lead mb-0" style="max-width:760px">Big, light Outfit headlines and DM Sans for reading — an editorial scale. Same text styles as the Figma file.</p>
+  </div>
+</header>
+<div class="container-xxl">
+  <div class="row gx-lg-5">
+    <aside class="col-lg-3 d-none d-lg-block pt-4"><nav class="docs-sidebar" aria-label="Sections">
+<p class="group">Foundations</p>
+<a href="../foundations/color.html">Color</a>
+<a href="../foundations/typography.html" aria-current="page">Typography</a>
+<a href="../foundations/logo.html">Logo</a>
+<p class="group">Components</p>
+<a href="../components/navbar.html">Navbar</a>
+<a href="../components/button.html">Button</a>
+<a href="../components/card.html">Card</a>
+<p class="group">Page Pattern</p>
+<a href="../patterns/case-study.html">Case study page</a>
+</nav></aside>
+    <main id="main" class="col-lg-9">
+
+<section class="docs-section" aria-labelledby="pair">
+  <h2 id="pair" class="h3">Pairing</h2>
+  <div class="row g-4 align-items-stretch">
+    <div class="col-md-6"><div class="demo h-100"><p class="overline mb-2">[ Headlines ]</p><p class="m-0" style="font-family:var(--sv-font-heading);font-size:80px;font-weight:300;line-height:1;letter-spacing:-.04em">Aa</p><p class="h4 mt-3 mb-1">Outfit</p><p class="small text-secondary-sv m-0">Geometric sans by Rodrigo Fuenzalida. Used large, in Light and Regular, with tight tracking — an editorial feel.</p></div></div>
+    <div class="col-md-6"><div class="demo h-100"><p class="overline mb-2">[ Body &amp; labels ]</p><p class="m-0" style="font-family:var(--sv-font-body);font-size:80px;line-height:1">Aa</p><p class="h4 mt-3 mb-1">DM Sans</p><p class="small text-secondary-sv m-0">Low-contrast grotesque from Colophon, built for small sizes. A <b>variable font</b> (optical size + weight), so one file covers every body style.</p></div></div>
+  </div>
+  <p class="mt-4 text-secondary-sv">Outfit carries over <a href="https://typographicalhierarchies.vercel.app/hierarchies/hierarchy3.html">Hierarchy 3 from my type hierarchies assignment</a>. See all three on the <a href="https://typographicalhierarchies.vercel.app/">type hierarchy site</a>.</p>
+</section>
+<section class="docs-section" aria-labelledby="scale">
+  <h2 id="scale" class="h3">Scale</h2>
+  <p class="text-secondary-sv">Headings shrink with <code>clamp()</code>: H1 is 40px on a 390px phone and 57px on desktop. Labels are small, bracketed and uppercase — <code>[ 01 ] Overview</code>, <code>( Work )</code> — echoing the live site.</p>
+  <div class="row g-3 py-4 border-bottom align-items-center"><div class="col-md-3"><b>Display/Desktop</b><div class="small text-secondary-sv">Outfit Light<br>90 / 100% · -4%</div><div class="mt-1"><code>.display-sv</code></div></div><div class="col-md-9"><p class="display-sv m-0">What we learned ?</p></div></div><div class="row g-3 py-4 border-bottom align-items-center"><div class="col-md-3"><b>Display/Giant</b><div class="small text-secondary-sv">Outfit Light<br>300 / 85% · -5%</div><div class="mt-1"><code>.giant-sv</code></div></div><div class="col-md-9"><p class="giant-sv m-0">3.</p></div></div><div class="row g-3 py-4 border-bottom align-items-center"><div class="col-md-3"><b>Display/Numeral</b><div class="small text-secondary-sv">Outfit Light<br>96 / 90% · -4%</div><div class="mt-1"><code>.numeral-sv</code></div></div><div class="col-md-9"><p class="numeral-sv m-0">1.</p></div></div><div class="row g-3 py-4 border-bottom align-items-center"><div class="col-md-3"><b>Heading/H1</b><div class="small text-secondary-sv">Outfit Regular<br>57 / 105% · -3%</div><div class="mt-1"><code>.h1</code></div></div><div class="col-md-9"><p class="h1 m-0">Pineapple: healthcare access, made clear.</p></div></div><div class="row g-3 py-4 border-bottom align-items-center"><div class="col-md-3"><b>Heading/H2</b><div class="small text-secondary-sv">Outfit Regular<br>48 / 110% · -3%</div><div class="mt-1"><code>.h2</code></div></div><div class="col-md-9"><p class="h2 m-0">What testing revealed</p></div></div><div class="row g-3 py-4 border-bottom align-items-center"><div class="col-md-3"><b>Heading/H3</b><div class="small text-secondary-sv">Outfit Regular<br>40 / 115% · -2%</div><div class="mt-1"><code>.h3</code></div></div><div class="col-md-9"><p class="h3 m-0">Designed for clarity, coverage, and confidence.</p></div></div><div class="row g-3 py-4 border-bottom align-items-center"><div class="col-md-3"><b>Heading/H4</b><div class="small text-secondary-sv">Outfit Regular<br>33 / 120% · -1%</div><div class="mt-1"><code>.h4</code></div></div><div class="col-md-9"><p class="h4 m-0">Research &amp; Synthesis</p></div></div><div class="row g-3 py-4 border-bottom align-items-center"><div class="col-md-3"><b>Heading/H5</b><div class="small text-secondary-sv">Outfit Regular<br>25 / 125% · -1%</div><div class="mt-1"><code>.h5</code></div></div><div class="col-md-9"><p class="h5 m-0">Bill estimation</p></div></div><div class="row g-3 py-4 border-bottom align-items-center"><div class="col-md-3"><b>Heading/Statement</b><div class="small text-secondary-sv">Outfit Medium<br>35 / 125% · -1%</div><div class="mt-1"><code>.statement-sv</code></div></div><div class="col-md-9"><p class="statement-sv m-0">Clarity comes from removing features, not adding them.</p></div></div><div class="row g-3 py-4 border-bottom align-items-center"><div class="col-md-3"><b>Heading/Ghost</b><div class="small text-secondary-sv">Outfit Light<br>25 / 125% · -1%</div><div class="mt-1"><code>.ghost-sv</code></div></div><div class="col-md-9"><p class="ghost-sv m-0">Competitive analysis</p></div></div><div class="row g-3 py-4 border-bottom align-items-center"><div class="col-md-3"><b>Body/Lead</b><div class="small text-secondary-sv">DM Sans Regular<br>19 / 155% · 0</div><div class="mt-1"><code>.lead</code></div></div><div class="col-md-9"><p class="lead m-0">One app for booking care, checking insurance and estimating costs.</p></div></div><div class="row g-3 py-4 border-bottom align-items-center"><div class="col-md-3"><b>Body/Regular</b><div class="small text-secondary-sv">DM Sans Regular<br>16 / 160% · 0</div><div class="mt-1"><code>body</code></div></div><div class="col-md-9"><p class=" m-0">Pineapple simplifies scheduling, clarifies insurance coverage and estimates costs.</p></div></div><div class="row g-3 py-4 border-bottom align-items-center"><div class="col-md-3"><b>Body/Emphasis</b><div class="small text-secondary-sv">DM Sans Italic<br>16 / 160% · 0</div><div class="mt-1"><code>.text-emphasis</code></div></div><div class="col-md-9"><p class="text-emphasis m-0">Subtracting to add value.</p></div></div><div class="row g-3 py-4 border-bottom align-items-center"><div class="col-md-3"><b>Body/Strong</b><div class="small text-secondary-sv">DM Sans SemiBold<br>16 / 160% · 0</div><div class="mt-1"><code>.fw-semibold</code></div></div><div class="col-md-9"><p class="fw-semibold m-0">Role: UX research, prototyping and testing</p></div></div><div class="row g-3 py-4 border-bottom align-items-center"><div class="col-md-3"><b>Body/Link</b><div class="small text-secondary-sv">DM Sans Medium<br>16 / 160% · underline</div><div class="mt-1"><code>&lt;a&gt;</code></div></div><div class="col-md-9"><a href="#">View the live site</a></div></div><div class="row g-3 py-4 border-bottom align-items-center"><div class="col-md-3"><b>Body/Small</b><div class="small text-secondary-sv">DM Sans Regular<br>13 / 150% · 0</div><div class="mt-1"><code>.small</code></div></div><div class="col-md-9"><p class="small m-0">Fig. 2 — Version 1 paper prototype</p></div></div><div class="row g-3 py-4 border-bottom align-items-center"><div class="col-md-3"><b>Label/Overline</b><div class="small text-secondary-sv">DM Sans Medium<br>13 / 140% · 0.5px · caps</div><div class="mt-1"><code>.overline</code></div></div><div class="col-md-9"><p class="overline m-0">[ 01 ] Overview</p></div></div><div class="row g-3 py-4 border-bottom align-items-center"><div class="col-md-3"><b>Label/Button</b><div class="small text-secondary-sv">DM Sans Medium<br>14 / 100% · 0.5px · caps</div><div class="mt-1"><code>.label-button</code></div></div><div class="col-md-9"><p class="label-button m-0">Learn more</p></div></div><div class="row g-3 py-4 border-bottom align-items-center"><div class="col-md-3"><b>Label/Meta</b><div class="small text-secondary-sv">DM Sans Medium<br>12 / 130% · 2% · caps</div><div class="mt-1"><code>.label-meta</code></div></div><div class="col-md-9"><p class="label-meta m-0">Pineapple · UX case study</p></div></div>
+</section>
+<section class="docs-section" aria-labelledby="tcss">
+  <h2 id="tcss" class="h3">CSS</h2>
+  <pre class="code"><code class="language-css">h1, h2, h3, h4, h5 { font-family: var(--sv-font-heading); font-weight: 400; }
+.display-sv { font-size: clamp(3rem, 7vw, 5.625rem); font-weight: 300; line-height: 1; letter-spacing: -.04em; }
+h1, .h1 { font-size: clamp(2.5rem, 5vw, 3.5625rem); line-height: 1.05; letter-spacing: -.03em; }
+h2, .h2 { font-size: clamp(2.0625rem, 4vw, 3rem); line-height: 1.1; letter-spacing: -.03em; }
+.lead { font-size: 1.1875rem; line-height: 1.55; color: var(--sv-text-secondary); }
+.overline { font-size: .8125rem; font-weight: 500; letter-spacing: .5px; text-transform: uppercase; }</code></pre>
+  <h3 class="h5 mt-4">Accessibility</h3>
+  <ul class="a11y-list"><li>Body never goes below 16px; 13px is only for captions and labels.</li><li>Light weights are only used at 40px and up, where thin strokes stay readable.</li><li>Brackets in labels are decorative — screen readers read “[ 01 ] Overview” fine, but section meaning comes from the real <code>h2</code>.</li><li>One <code>h1</code> per page; heading levels are never skipped for visual size.</li></ul>
+</section>
+
+    </main>
+  </div>
+</div>
+<footer class="footer-sv">
+  <div class="container-xxl">
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-4">
+      <img src="../img/logo-reverse.svg" alt="Chay" width="120" height="35">
+      <ul class="list-inline m-0 d-flex flex-wrap gap-4">
+        <li><a href="https://www.figma.com/design/3VfjauqFIbsYq6r5nHmMNi">Figma file</a></li>
+        <li><a href="../DESIGN.md">DESIGN.md</a></li>
+        <li><a href="https://typographicalhierarchies.vercel.app/">Type hierarchies</a></li>
+        <li><a href="https://github.com/itsmechaithanya">GitHub</a></li>
+      </ul>
+    </div>
+    <hr>
+    <p class="copy m-0">© 2026 Chaithanya Mangali · HCI 472 Design Fundamentals II · Built with Bootstrap 5 from a DESIGN.md exported from Figma.</p>
+  </div>
+</footer>
+<script src="../vendor/bootstrap.bundle.min.js"></script><script>
+document.querySelectorAll('pre.code').forEach(pre => {
+  const b = document.createElement('button'); b.className = 'copy-btn'; b.type = 'button'; b.textContent = 'Copy';
+  b.addEventListener('click', async () => { try { await navigator.clipboard.writeText(pre.querySelector('code').innerText); b.textContent = 'Copied'; } catch (e) { b.textContent = 'Select & copy'; } setTimeout(() => b.textContent = 'Copy', 1600); });
+  pre.appendChild(b);
+});
+</script>
+</body>
+</html>

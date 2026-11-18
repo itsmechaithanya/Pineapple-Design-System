@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Button · Pineapple Design System</title>
+<meta name="description" content="Pineapple Design System — Bootstrap 5 design system by Chaithanya Mangali (HCI 472).">
+<link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link href="../vendor/fonts.css" rel="stylesheet">
+<link href="../vendor/bootstrap.min.css" rel="stylesheet">
+<link href="../css/sds.css" rel="stylesheet">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<nav class="navbar navbar-expand-md docs-topbar sticky-top" data-bs-theme="dark" aria-label="Design system">
+  <div class="container-xxl">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html"><img src="../img/logo-reverse.svg" alt="Chay" width="96" height="28"><span class="small text-white-50 d-none d-sm-inline border-start border-secondary ps-2 ms-1">Pineapple Design System</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#docsNav" aria-controls="docsNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse justify-content-end" id="docsNav"><ul class="navbar-nav gap-md-3 py-2 py-md-0"><li class="nav-item"><a class="nav-link px-lg-2" href="../foundations/color.html">Foundations</a></li><li class="nav-item"><a class="nav-link px-lg-2 active" href="../components/navbar.html" aria-current="true">Components</a></li><li class="nav-item"><a class="nav-link px-lg-2" href="../patterns/case-study.html">Page Pattern</a></li><li class="nav-item"><a class="nav-link px-lg-2" href="../DESIGN.md">DESIGN.md</a></li></ul></div>
+  </div>
+</nav>
+
+<header class="docs-hero">
+  <div class="container-xxl">
+    <span class="overline">[ Components · 02 ]</span>
+    <h1 class="mt-2 mb-3">Button</h1>
+    <p class="lead mb-0" style="max-width:760px">Nearly square buttons with an ↗ arrow, in three styles: Primary (ink), Secondary “Learn more” (light grey) and Accent (lime).</p>
+  </div>
+</header>
+<div class="container-xxl">
+  <div class="row gx-lg-5">
+    <aside class="col-lg-3 d-none d-lg-block pt-4"><nav class="docs-sidebar" aria-label="Sections">
+<p class="group">Foundations</p>
+<a href="../foundations/color.html">Color</a>
+<a href="../foundations/typography.html">Typography</a>
+<a href="../foundations/logo.html">Logo</a>
+<p class="group">Components</p>
+<a href="../components/navbar.html">Navbar</a>
+<a href="../components/button.html" aria-current="page">Button</a>
+<a href="../components/card.html">Card</a>
+<p class="group">Page Pattern</p>
+<a href="../patterns/case-study.html">Case study page</a>
+</nav></aside>
+    <main id="main" class="col-lg-9">
+
+<section class="docs-section" aria-labelledby="ex">
+  <h2 id="ex" class="h3">Variants</h2>
+  <div class="demo d-flex flex-wrap gap-3 align-items-center">
+    <a class="btn btn-primary" href="#">View live site</a>
+    <a class="btn btn-light-sv" href="#">Learn more</a>
+    <a class="btn btn-accent" href="#">Get in touch</a>
+    <button class="btn btn-primary" type="button" disabled>Disabled</button>
+  </div>
+  <p class="overline mb-2 mt-4">[ States — Primary ]</p>
+  <div class="demo d-flex flex-wrap gap-4 align-items-center">
+    <figure class="m-0 text-center"><span class="btn btn-primary">Default</span><figcaption class="small text-secondary-sv mt-2">Default</figcaption></figure>
+    <figure class="m-0 text-center"><span class="btn btn-primary" style="background:var(--sv-action-primary-hover)">Hover</span><figcaption class="small text-secondary-sv mt-2">Hover (arrow nudges ↗)</figcaption></figure>
+    <figure class="m-0 text-center"><span class="btn btn-primary" style="box-shadow:var(--sv-focus-ring)">Focus</span><figcaption class="small text-secondary-sv mt-2">Focus-visible</figcaption></figure>
+  </div>
+  <p class="small text-secondary-sv mt-3">Figma: <b>Button</b> component set, <code>Style = Primary | Secondary | Accent</code> × <code>State = Default | Hover</code>, with a <code>Label</code> text property and an ↗ arrow.</p>
+</section>
+<section class="docs-section" aria-labelledby="spec">
+  <h2 id="spec" class="h3">CSS specifications</h2>
+  <div class="table-responsive"><table class="table spec-table align-middle"><thead><tr><th>Property</th><th>Value</th><th>Token / CSS</th></tr></thead><tbody><tr><td>Padding</td><td>12px 20px</td><td><code>--bs-btn-padding-y / -x</code></td></tr><tr><td>Min height</td><td>44px</td><td><code>min-height</code></td></tr><tr><td>Radius</td><td>2px (nearly square)</td><td><code>var(--sv-radius-pill)</code></td></tr><tr><td>Font</td><td>DM Sans Medium 14, uppercase, +0.5px</td><td><code>var(--sv-font-body)</code></td></tr><tr><td>Arrow</td><td>↗ after the label, 12px gap</td><td><code>.btn::after</code></td></tr><tr><td>Primary</td><td>Ink fill · white text → Ink 700</td><td><code>var(--sv-action-primary) / -hover</code></td></tr><tr><td>Secondary (Learn more)</td><td>Grey 50 fill · ink text → Grey 200</td><td><code>var(--sv-bg-subtle) / var(--sv-grey-200)</code></td></tr><tr><td>Accent</td><td>Lime fill · ink text → Lime 300</td><td><code>var(--sv-action-accent) / -hover</code></td></tr><tr><td>Hover</td><td>Arrow moves 2px up-right; no shadow</td><td><code>.btn:hover::after</code></td></tr><tr><td>Focus</td><td>2px white + 2px ink ring</td><td><code>var(--sv-focus-ring)</code></td></tr><tr><td>Transition</td><td>200ms (off with reduced motion)</td><td><code>transition</code></td></tr></tbody></table></div>
+  <pre class="code"><code class="language-css">.btn { --bs-btn-padding-y: 12px; --bs-btn-padding-x: 20px; --bs-btn-font-weight: 500; --bs-btn-font-size: .875rem;
+  --bs-btn-border-radius: 2px; text-transform: uppercase; letter-spacing: .5px; min-height: 44px; gap: 12px; }
+.btn::after { content: &quot;↗&quot;; transition: transform .2s ease; }
+.btn:hover::after { transform: translate(2px, -2px); }
+.btn-primary { --bs-btn-bg: var(--sv-action-primary); --bs-btn-border-color: var(--sv-action-primary);
+  --bs-btn-hover-bg: var(--sv-action-primary-hover); --bs-btn-hover-border-color: var(--sv-action-primary-hover); }
+.btn-light-sv { --bs-btn-color: var(--sv-text-primary); --bs-btn-bg: var(--sv-bg-subtle); --bs-btn-border-color: var(--sv-bg-subtle);
+  --bs-btn-hover-bg: var(--sv-grey-200); --bs-btn-hover-border-color: var(--sv-grey-200); }
+.btn-accent { --bs-btn-color: var(--sv-text-primary); --bs-btn-bg: var(--sv-action-accent); --bs-btn-border-color: var(--sv-action-accent);
+  --bs-btn-hover-bg: var(--sv-action-accent-hover); }</code></pre>
+  <h3 class="h5 mt-4">Markup</h3>
+  <pre class="code"><code class="language-html">&lt;a class=&quot;btn btn-primary&quot; href=&quot;https://www.itsmechaithanya.com/Pineapple&quot;&gt;View live site&lt;/a&gt;
+&lt;a class=&quot;btn btn-light-sv&quot; href=&quot;#process&quot;&gt;Learn more&lt;/a&gt;
+&lt;button class=&quot;btn btn-accent&quot; type=&quot;button&quot;&gt;Get in touch&lt;/button&gt;</code></pre>
+</section>
+<section class="docs-section" aria-labelledby="acc">
+  <h2 id="acc" class="h3">Accessibility</h2>
+  <ul class="a11y-list">
+    <li>Use <code>&lt;a&gt;</code> for navigation and <code>&lt;button&gt;</code> for actions.</li>
+    <li>Contrast: white on ink 19.8:1, ink on Grey 50 18.5:1, ink on lime 15.3:1 — all AAA.</li>
+    <li>The ↗ arrow is added with CSS <code>::after</code>, so screen readers don’t announce it.</li>
+    <li>Target size is at least 44 × 44px.</li>
+    <li>The focus ring is ink with a white gap, so it shows on white, grey and lime.</li>
+    <li>Labels are verbs that say what happens (“View live site”), not “Click here”. Uppercase is done in CSS, so the source text stays readable.</li>
+    <li>The arrow animation is turned off under <code>prefers-reduced-motion</code>.</li>
+  </ul>
+</section>
+
+    </main>
+  </div>
+</div>
+<footer class="footer-sv">
+  <div class="container-xxl">
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-4">
+      <img src="../img/logo-reverse.svg" alt="Chay" width="120" height="35">
+      <ul class="list-inline m-0 d-flex flex-wrap gap-4">
+        <li><a href="https://www.figma.com/design/3VfjauqFIbsYq6r5nHmMNi">Figma file</a></li>
+        <li><a href="../DESIGN.md">DESIGN.md</a></li>
+        <li><a href="https://typographicalhierarchies.vercel.app/">Type hierarchies</a></li>
+        <li><a href="https://github.com/itsmechaithanya">GitHub</a></li>
+      </ul>
+    </div>
+    <hr>
+    <p class="copy m-0">© 2026 Chaithanya Mangali · HCI 472 Design Fundamentals II · Built with Bootstrap 5 from a DESIGN.md exported from Figma.</p>
+  </div>
+</footer>
+<script src="../vendor/bootstrap.bundle.min.js"></script><script>
+document.querySelectorAll('pre.code').forEach(pre => {
+  const b = document.createElement('button'); b.className = 'copy-btn'; b.type = 'button'; b.textContent = 'Copy';
+  b.addEventListener('click', async () => { try { await navigator.clipboard.writeText(pre.querySelector('code').innerText); b.textContent = 'Copied'; } catch (e) { b.textContent = 'Select & copy'; } setTimeout(() => b.textContent = 'Copy', 1600); });
+  pre.appendChild(b);
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Case study — Pineapple (Page pattern) · Pineapple Design System</title>
+<meta name="description" content="Page pattern: a UX portfolio case-study page for Pineapple, built from the Pineapple Design System.">
+<link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link href="../vendor/fonts.css" rel="stylesheet">
+<link href="../vendor/bootstrap.min.css" rel="stylesheet">
+<link href="../css/sds.css" rel="stylesheet">
+</head>
+<body>
+
+<style>
+.ls-aside { font-size: .8125rem; color: var(--sv-text-secondary); }
+.ls-hero { padding-top: clamp(72px, 11vw, 160px); padding-bottom: 32px; }
+.ls-hero h1 { font-size: clamp(2.5rem, 6.4vw, 5.625rem); font-weight: 300; line-height: 1; letter-spacing: -.04em; max-width: 14ch; }
+.ls-strip { border-top: 1px solid var(--sv-ink-900); padding-top: 14px; margin-top: clamp(40px, 8vw, 120px); font-size: .75rem; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.ls-strip a { color: inherit; text-decoration: none; } .ls-strip a:hover { text-decoration: underline; }
+.ls-strip .grp { display: flex; gap: clamp(16px, 4vw, 64px); }
+.ls-kicker { font-family: var(--sv-font-heading); font-weight: 300; font-size: 1.5625rem; color: var(--sv-grey-400); margin-bottom: 12px; }
+.ls-statement { font-family: var(--sv-font-heading); font-weight: 500; font-size: clamp(1.5rem, 2.6vw, 2.1875rem); line-height: 1.25; letter-spacing: -.01em; max-width: 22ch; }
+.ls-photo { width: 100%; height: 100%; object-fit: cover; display: block; }
+.ls-section { padding-block: clamp(64px, 9vw, 120px); }
+.ls-h2xl { font-size: clamp(2.0625rem, 6.4vw, 5.625rem); font-weight: 300; line-height: 1; letter-spacing: -.04em; }
+.ls-numeral { font-family: var(--sv-font-heading); font-weight: 300; font-size: clamp(6rem, 20vw, 18.75rem); line-height: .85; letter-spacing: -.05em; }
+.ls-service { display: flex; align-items: center; gap: 24px; padding: 18px 0 18px 30px; border-top: 1px solid var(--sv-border-default); }
+.ls-service:last-of-type { border-bottom: 1px solid var(--sv-border-default); }
+.ls-service h3 { font-family: var(--sv-font-heading); font-weight: 300; font-size: 1.5625rem; color: var(--sv-grey-500); margin: 0; flex: 1; }
+.ls-service p { font-size: .8125rem; margin: 0; width: 246px; }
+@media (max-width: 575.98px) { .ls-service { flex-direction: column; align-items: flex-start; gap: 6px; padding-left: 0; } .ls-service p { width: auto; } }
+.ls-about p { font-family: var(--sv-font-heading); font-size: 1.5625rem; line-height: 1.25; letter-spacing: -.01em; max-width: 30ch; }
+.ls-images { display: grid; gap: 10px; grid-template-columns: 1fr 1fr; }
+.ls-images > :first-child { grid-column: 1 / -1; aspect-ratio: 16 / 9; }
+.ls-images > * { aspect-ratio: 3 / 4; overflow: hidden; background: var(--sv-grey-50); }
+@media (min-width: 768px) { .ls-images { grid-template-columns: 610fr 229fr 457fr; } .ls-images > :first-child { grid-column: auto; aspect-ratio: auto; } .ls-images > * { aspect-ratio: auto; height: clamp(240px, 24vw, 343px); } }
+.marquee-sv.pink { background: var(--sv-pink-500, #EE55B6); } .marquee-sv.green { background: var(--sv-green-500, #6BFD03); }
+.ls-coords { font-size: .8125rem; text-align: right; }
+.ls-cta { font-family: var(--sv-font-heading); font-weight: 500; font-size: clamp(1.5rem, 2.6vw, 2.1875rem); line-height: 1.25; margin: 0; }
+.ls-drives-photo { aspect-ratio: 597 / 934; overflow: hidden; }
+</style>
+<style>
+.ls-panels { display: grid; gap: 10px; grid-template-columns: 1fr 1fr; }
+.ls-panels > :first-child { grid-column: 1 / -1; }
+@media (min-width: 768px) { .ls-panels { grid-template-columns: repeat(3, 1fr); } .ls-panels > :first-child { grid-column: auto; } }
+.ls-panel { background: var(--sv-grey-50); aspect-ratio: 425 / 520; display: grid; place-items: center; padding: 6%; overflow: hidden; }
+.ls-panel img { max-width: 100%; max-height: 100%; object-fit: contain; display: block; }
+.ls-panel.tall { aspect-ratio: 597 / 860; }
+.ls-panel.wide { aspect-ratio: 1296 / 700; background: #EAF2FE; padding: 0; }
+.ls-panel.wide img { width: 100%; height: 100%; object-fit: contain; }
+</style>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="bg-inverse-sv small py-2"><div class="container d-flex justify-content-between gap-3"><span>Page pattern · live version of the Figma layout</span><a href="../index.html">← Back to the design system</a></div></div>
+<nav class="navbar navbar-expand-lg navbar-sv sticky-top" aria-label="Main">
+  <div class="container">
+    <a class="navbar-brand" href="#"><img src="../img/logo-color.svg" alt="Chay" width="110" height="32"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+            aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+      <ul class="navbar-nav align-items-lg-center">
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Work</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Process</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+      </ul>
+      <a class="btn btn-primary ms-lg-4 mt-2 mt-lg-0" href="#">Résumé</a>
+    </div>
+  </div>
+</nav>
+<main id="main">
+  <section class="ls-hero" aria-labelledby="title">
+    <div class="container">
+      <p class="ls-aside mb-3">( UX case study — Healthcare navigation app )</p>
+      <h1 id="title" class="mb-4">Pineapple: healthcare access, made clear.</h1>
+      <p class="lead m-0">One app for booking care, checking insurance and estimating costs — UX research, prototyping and usability testing.</p>
+      <div class="ls-strip"><div class="grp"><span>Pineapple · UX case study</span><span>[ Completed ]</span></div><div class="grp"><a href="#s1">Research +</a><a href="#s2">Prototype +</a></div></div>
+    </div>
+  </section>
+
+  <section class="ls-section" aria-labelledby="intro">
+    <div class="container">
+      <p class="ls-kicker">How might we…</p>
+      <p id="intro" class="ls-statement" style="max-width:30ch">…design a healthcare platform that simplifies scheduling, clarifies insurance coverage and ensures financial transparency for diverse users in Chicago?</p>
+      <div class="row g-4 gy-5 mt-4 align-items-end">
+        <div class="col-md-5 col-lg-3"><figure class="m-0"><div class="ls-panel" style="aspect-ratio:303/412"><img src="../img/pa-find.png" alt="Find Hospitals screen with in-network and out-of-network filters"></div><figcaption class="ls-aside mt-2">( Find hospitals — network filtering )</figcaption></figure></div>
+        <div class="col-md-7 col-lg-8 offset-lg-1"><div class="row g-4">
+          <div class="col-lg-6"><h3 class="h5 mb-2">The problem</h3><p class="text-secondary-sv m-0">One in five U.S. adults under 65 face non-cost barriers to care, like appointment delays and transportation limits. In Chicago we found “maternity care deserts” and big gaps in access to in-network providers.</p></div>
+          <div class="col-lg-6"><h3 class="h5 mb-2">The approach</h3><p class="text-secondary-sv m-0">A team project covering UX research, prototyping and usability testing. We moved beyond national datasets to document how patients actually navigate a system that pushes the work of coordination onto them.</p></div>
+        </div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ls-section border-bottom" aria-labelledby="process">
+    <div class="container">
+      <div class="d-flex flex-column flex-md-row align-items-md-end gap-3 mb-5">
+        <h2 id="process" class="ls-h2xl text-md-center flex-grow-1 m-0">Designed for clarity, coverage, and confidence.</h2>
+        <span class="ls-aside order-first order-md-last">( Process )</span>
+      </div>
+      <p class="h5 m-0" style="max-width:548px">From research to personas, through three rounds of design, to usability testing — removing features at every step to make booking and billing clearer.</p>
+    </div>
+  </section>
+  
+  <section class="ls-section" aria-labelledby="s1">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-5"><span class="ls-numeral" aria-hidden="true">1.</span></div>
+        <div class="col-md-7 pt-md-4">
+          <h2 id="s1" class="overline mb-4">+&nbsp;&nbsp;&nbsp;[ Research &amp; Synthesis ]</h2>
+          <div class="ls-service"><h3>Competitive analysis</h3><p>Zocdoc and MyChart: strengths, gaps and opportunities</p></div><div class="ls-service"><h3>12 interviews</h3><p>Ages 20–72, 15–30 minutes, over Zoom or in person</p></div><div class="ls-service"><h3>Affinity mapping</h3><p>Goals, frustrations and user quotes, sorted into themes</p></div>
+          <a class="btn btn-light-sv mt-4" href="#s1-about">Learn more</a>
+        </div>
+      </div>
+      <div class="ls-about mt-5 pt-lg-5" id="s1-about">
+        <p class="small mb-2" style="font-family:var(--sv-font-body)">+&nbsp;&nbsp;&nbsp;( About it &amp; Examples )</p>
+        <p class="m-0">Even health-literate professionals were worn out by the back-and-forth between insurers and providers. International students described an extra layer of “administrative complexity” that delayed their care.</p>
+      </div>
+      <div class="ls-panels mt-5"><div class="ls-panel"><img src="../img/pa-persona-watermelon.jpg" alt="Persona: Watermelon, a 72-year-old retired professor in Chicago" loading="lazy"></div><div class="ls-panel"><img src="../img/pa-persona-strawberry.jpg" alt="Persona: Strawberry, a 26-year-old international graduate student in Chicago" loading="lazy"></div><div class="ls-panel"><img src="../img/pa-persona-blueberry.jpg" alt="Persona: Blueberry, a 45-year-old physiotherapist" loading="lazy"></div></div>
+    </div>
+  </section>
+  <div class="marquee-sv " aria-hidden="true"><div class="track">MEET STRAWBERRY, BLUEBERRY &amp; WATERMELON — LET’S WORK — MEET STRAWBERRY, BLUEBERRY &amp; WATERMELON — LET’S WORK — MEET STRAWBERRY, BLUEBERRY &amp; WATERMELON — LET’S WORK — MEET STRAWBERRY, BLUEBERRY &amp; WATERMELON — LET’S WORK — MEET STRAWBERRY, BLUEBERRY &amp; WATERMELON — LET’S WORK — MEET STRAWBERRY, BLUEBERRY &amp; WATERMELON — LET’S WORK — MEET STRAWBERRY, BLUEBERRY &amp; WATERMELON — LET’S WORK — MEET STRAWBERRY, BLUEBERRY &amp; WATERMELON — LET’S WORK — MEET STRAWBERRY, BLUEBERRY &amp; WATERMELON — LET’S WORK — MEET STRAWBERRY, BLUEBERRY &amp; WATERMELON — LET’S WORK — MEET STRAWBERRY, BLUEBERRY &amp; WATERMELON — LET’S WORK — MEET STRAWBERRY, BLUEBERRY &amp; WATERMELON — LET’S WORK — </div></div>
+  <section class="ls-section" aria-labelledby="s2">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-5"><span class="ls-numeral" aria-hidden="true">2.</span></div>
+        <div class="col-md-7 pt-md-4">
+          <h2 id="s2" class="overline mb-4">+&nbsp;&nbsp;&nbsp;[ Ideation &amp; Iteration ]</h2>
+          <div class="ls-service"><h3>Version 1</h3><p>Paper prototypes and information architecture</p></div><div class="ls-service"><h3>Version 2</h3><p>Digital grid layout with color-coded categories</p></div><div class="ls-service"><h3>Version 3</h3><p>Minimal white look with blue line-art icons</p></div>
+          <a class="btn btn-light-sv mt-4" href="#s2-about">Learn more</a>
+        </div>
+      </div>
+      <div class="ls-about mt-5 pt-lg-5" id="s2-about">
+        <p class="small mb-2" style="font-family:var(--sv-font-body)">+&nbsp;&nbsp;&nbsp;( About it &amp; Examples )</p>
+        <p class="m-0">Pineapple was not a straight line. Each version took us from a broad concept to a focused app — “subtracting to add value” by keeping only the booking and billing features users needed most.</p>
+      </div>
+      <div class="ls-panels mt-5"><div class="ls-panel"><img src="../img/pa-paper.png" alt="Version 1: hand-drawn paper sketch of the home screen" loading="lazy"></div><div class="ls-panel"><img src="../img/pa-v2.png" alt="Version 2: high-fidelity home screen with color-coded quick access cards" loading="lazy"></div><div class="ls-panel"><img src="../img/pa-v3-home.png" alt="Version 3: final home screen with blue line-art icons" loading="lazy"></div></div>
+    </div>
+  </section>
+  <div class="marquee-sv pink" aria-hidden="true"><div class="track">LEARN MORE ABOUT Ideation &amp; Iteration — LET’S WORK — LEARN MORE ABOUT Ideation &amp; Iteration — LET’S WORK — LEARN MORE ABOUT Ideation &amp; Iteration — LET’S WORK — LEARN MORE ABOUT Ideation &amp; Iteration — LET’S WORK — LEARN MORE ABOUT Ideation &amp; Iteration — LET’S WORK — LEARN MORE ABOUT Ideation &amp; Iteration — LET’S WORK — LEARN MORE ABOUT Ideation &amp; Iteration — LET’S WORK — LEARN MORE ABOUT Ideation &amp; Iteration — LET’S WORK — LEARN MORE ABOUT Ideation &amp; Iteration — LET’S WORK — LEARN MORE ABOUT Ideation &amp; Iteration — LET’S WORK — LEARN MORE ABOUT Ideation &amp; Iteration — LET’S WORK — LEARN MORE ABOUT Ideation &amp; Iteration — LET’S WORK — </div></div>
+  <section class="ls-section" aria-labelledby="s3">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-5"><span class="ls-numeral" aria-hidden="true">3.</span></div>
+        <div class="col-md-7 pt-md-4">
+          <h2 id="s3" class="overline mb-4">+&nbsp;&nbsp;&nbsp;[ Core Features ]</h2>
+          <div class="ls-service"><h3>Find hospitals</h3><p>Network filtering shows what your insurance covers</p></div><div class="ls-service"><h3>Filter by date or problem</h3><p>Find specialists by symptom or appointment date</p></div><div class="ls-service"><h3>Bill estimation</h3><p>A detailed cost projection before you book</p></div><div class="ls-service"><h3>Insurance management</h3><p>Scan a card with OCR and sync your coverage</p></div>
+          <a class="btn btn-light-sv mt-4" href="#s3-about">Learn more</a>
+        </div>
+      </div>
+      <div class="ls-about mt-5 pt-lg-5" id="s3-about">
+        <p class="small mb-2" style="font-family:var(--sv-font-body)">+&nbsp;&nbsp;&nbsp;( About it &amp; Examples )</p>
+        <p class="m-0">No more surprise bills: pick a hospital, doctor and procedure, and Pineapple shows a detailed estimate before the appointment.</p>
+      </div>
+      <div class="ls-panels mt-5"><div class="ls-panel"><img src="../img/pa-doctor.png" alt="Find Doctors screen, filtered by fastest date or problem" loading="lazy"></div><div class="ls-panel"><img src="../img/pa-bill.png" alt="Bill Estimation screen with a cost breakdown" loading="lazy"></div><div class="ls-panel"><img src="../img/pa-insurance.png" alt="Add Insurance Card screen with OCR-extracted details" loading="lazy"></div></div>
+    </div>
+  </section>
+  <div class="marquee-sv green" aria-hidden="true"><div class="track">LEARN MORE ABOUT Core Features — LET’S WORK — LEARN MORE ABOUT Core Features — LET’S WORK — LEARN MORE ABOUT Core Features — LET’S WORK — LEARN MORE ABOUT Core Features — LET’S WORK — LEARN MORE ABOUT Core Features — LET’S WORK — LEARN MORE ABOUT Core Features — LET’S WORK — LEARN MORE ABOUT Core Features — LET’S WORK — LEARN MORE ABOUT Core Features — LET’S WORK — LEARN MORE ABOUT Core Features — LET’S WORK — LEARN MORE ABOUT Core Features — LET’S WORK — LEARN MORE ABOUT Core Features — LET’S WORK — LEARN MORE ABOUT Core Features — LET’S WORK — </div></div>
+
+  <section class="ls-section" aria-labelledby="learned">
+    <div class="container">
+      <h2 id="learned" class="ls-h2xl mb-5">What we learned ?</h2>
+      <div class="row g-4 gy-5">
+        <div class="col-md-6 col-lg-5 d-flex flex-column justify-content-between gap-5">
+          <p class="lead m-0" style="max-width:32ch">We ran four remote usability tests. Each participant played a student with a sprained wrist who needed an in-network appointment: find the earliest slot, then check the cost estimate.</p>
+          <div><p class="ls-statement mb-4">Clarity comes from removing features, not adding them — and small changes to touch targets and labels build older users’ confidence.</p><a class="btn btn-light-sv" href="https://www.itsmechaithanya.com/Pineapple">View full case study</a></div>
+        </div>
+        <div class="col-md-6 offset-lg-1"><div class="ls-panel tall"><img src="../img/pa-v3-booking.png" alt="Version 3 Book Appointments screen with date, time and estimated cost" loading="lazy"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ls-section pb-4" aria-labelledby="revealed">
+    <div class="container">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end gap-3 mb-5">
+        <h2 id="revealed" class="ls-h2xl m-0" style="max-width:11ch">What testing revealed</h2>
+        <span class="ls-aside">( 4 remote usability tests )</span>
+      </div>
+      <div class="row g-4 mb-5">
+        <div class="col-lg-6"><h3 class="h5 mb-2">Missing integrations</h3><p class="text-secondary-sv m-0">Users expected standard features we hadn’t built: hospital addresses that open in Google Maps, Uber/Lyft rides and syncing appointments to their own calendars.</p></div>
+        <div class="col-lg-6"><h3 class="h5 mb-2">Onboarding friction</h3><p class="text-secondary-sv m-0">The “insurance-first” flow blocked people without insurance, so the next version needs a self-pay or guest path.</p></div>
+      </div>
+      <div class="ls-panel wide"><img src="../img/pa-hero.png" alt="Three Pineapple screens: onboarding, home and a map of nearby hospitals in Chicago" loading="lazy"></div>
+    </div>
+  </section>
+</main>
+<footer class="pt-5 pb-4">
+  <div class="container">
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-4 mb-5">
+      <p class="ls-cta">Let’s talk about<br>what comes next.</p>
+      <a class="btn btn-light-sv align-self-start align-self-md-center" href="mailto:cmangali@depaul.edu">Email me</a>
+    </div>
+    <div class="ls-strip mt-0"><div class="grp"><span>Chicago based</span><span>[ © 2026 Chaithanya Mangali ]</span></div><div class="grp"><a href="https://www.linkedin.com/">LinkedIn +</a><a href="https://github.com/itsmechaithanya">GitHub +</a></div></div>
+  </div>
+</footer>
+<script src="../vendor/bootstrap.bundle.min.js"></script>
+</body>
+</html>
